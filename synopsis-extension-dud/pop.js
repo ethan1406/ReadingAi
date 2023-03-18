@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-  console.log("activiated gucci mucci");
+  console.log("activiated gucci")
   var button = document.getElementById('my-button');  
   var result = document.getElementById('result');
   
@@ -16,20 +16,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 method: 'POST',
                 mode: 'cors',
                 headers: {
-                  'Accept': '*/*',
-                  'Content-Type': 'application/json',
-                  'Connection': 'keep-alive',
+                  'Content-Type': 'text/plain',
                 },
                 body: JSON.stringify(jsonBody)
               }
         )
         .then(function(response) {
-          return response.json();
+          return response.text();
         })
         .then(function(data) {
           // Update the popup content with the result
           console.log(data);
-          result.innerText = data.message;
+          result.innerText = data;
         })
         .catch(function(error) {
           console.error(error);
