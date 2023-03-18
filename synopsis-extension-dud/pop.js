@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var result = document.getElementById('result');
+  console.log("activiated gucci mucci");
+  var button = document.getElementById('my-button');  
+  var result = document.getElementById('result');
   
     button.addEventListener('click', function() {
       
