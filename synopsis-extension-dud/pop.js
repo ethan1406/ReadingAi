@@ -1,11 +1,25 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  console.log("activiated gucci")
-
+  console.log("activiated gucci");
 
   var button = document.getElementById('my-button');  
   var result = document.getElementById('result');
+
+
+  chrome.storage.local.get("selectedText", function(data) {
+    console.error(data.selectedText);
+      if(typeof data.selectedText != "undefined") {
+        chrome.storage.local.get("contextText", function(data) {
+          console.error(data.contextText);
+            if(typeof data.contextText != "undefined") {
+              result.innerText = data.contextText;
+            } 
+        });
+      } 
+  });
+
+
   
   button.addEventListener('click', function() {
     
@@ -38,9 +52,4 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 
-  chrome.runtime.onMessage.addListener(function (message) {
-    result.innerText = data.text;
-  });
-
 });
-  

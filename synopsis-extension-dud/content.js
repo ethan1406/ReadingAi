@@ -1,5 +1,5 @@
 
-console.error("here")
+
 
 document.onmouseup = getText;
 function getText(e) {
@@ -11,7 +11,7 @@ function getText(e) {
     const afterText = range.endContainer.textContent.slice(range.endOffset);
     const surroundText = range.startContainer.textContent;
 
-    console.error(surroundText);
-  
+    chrome.storage.local.set({'selectedText': selection.toString()});  
+    chrome.storage.local.set({'contextText': surroundText});
   }
 }

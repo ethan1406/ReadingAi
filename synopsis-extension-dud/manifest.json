@@ -18,6 +18,7 @@
       "service_worker": "background.js"
     },
     "permissions": [
-      "activeTab"
+      "activeTab",
+      "storage"
     ]
 }
