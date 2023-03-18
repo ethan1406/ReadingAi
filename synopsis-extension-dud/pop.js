@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
         prompt: "follow the money",
         context: "follow the money and you will end up in heaven"
       }
+      console.log(jsonBody);
       fetch(
             'https://eqgrz3rfud.execute-api.us-west-1.amazonaws.com/default/ReadingComprehensionFunciton',
             {
@@ -27,6 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
           // Update the popup content with the result
           console.log(data);
           result.innerText = data.message;
+        })
+        .catch(function(error) {
+          console.error(error);
         });
     });
   });
