@@ -7,6 +7,9 @@
       "default_popup": "summary.html",
       "default_icon": "hello_extensions.png"
     },
+    "background": {
+      "service_worker": "background.js"
+    },
     "permissions": [
       "activeTab"
     ]
