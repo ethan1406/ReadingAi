@@ -1,0 +1,14 @@
+{
+    "name": "Reading AI",
+    "description": "Reading AI Assistant",
+    "version": "1.0",
+    "manifest_version": 1,
+    "action": {
+      "default_popup": "summary.html",
+      "default_icon": "images/hello_extensions.png"
+    },
+    "permissions": [
+      "activeTab",
+      "https://eqgrz3rfud.execute-api.us-west-1.amazonaws.com/default/*"
+    ]
+}
